@@ -1,0 +1,26 @@
+{
+  "name": "ember-cli-less",
+  "version": "1.0.0",
+  "description": "Use LESS to preprocess your ember-cli app's stylesheets, with support for sourceMaps and include paths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ember-addon",
+    "less"
+  ],
+  "author": "Garth Poitras",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-less-single": "^0.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gdub22/ember-cli-less.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gdub22/ember-cli-less/issues"
+  },
+  "homepage": "https://github.com/gdub22/ember-cli-less"
+}
