@@ -1,6 +1,6 @@
 # ember-cli-less
 
-Use LESS to preprocess your ember-cli app's css, with support for sourceMaps and include paths.
+Use LESS to preprocess your ember-cli app's css, with support for source maps and include paths.
 *This is copied from https://github.com/aexmachina/ember-cli-sass. All credits to the author*
 
 ## Installation
