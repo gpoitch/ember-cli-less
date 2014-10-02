@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-less",
   "version": "1.0.0",
-  "description": "Use LESS to preprocess your ember-cli app's stylesheets, with support for sourceMaps and include paths",
+  "description": "Use LESS to preprocess your ember-cli app's css, with support for sourceMaps and include paths",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
