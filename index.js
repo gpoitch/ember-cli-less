@@ -2,6 +2,7 @@ var LESSCompiler = require('broccoli-less-single');
 
 function LESSPlugin(options) {
   this.name = 'ember-cli-less';
+  this.ext = 'css';
   options = options || {};
   options.inputFile = options.inputFile || 'app.less';
   options.outputFile = options.outputFile || 'app.css';

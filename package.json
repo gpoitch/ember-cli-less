@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-less",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use LESS to preprocess your ember-cli app's css, with support for source maps and include paths",
   "main": "index.js",
   "scripts": {
