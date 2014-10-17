@@ -34,7 +34,8 @@ EmberCLILESS.prototype.included = function included(app) {
   if ((options.sourceMap === undefined) && (app.env === 'development')) {
     options.sourceMap = true;
   }
-  options.outputFile = options.outputFile || this.project.name() + '.css';
+  var appOutputPaths = app.options.outputPaths.app;
+  options.outputFile = options.outputFile || appOutputPaths.less || appOutputPaths.css;
   app.registry.add('css', new LESSPlugin(options));
 };
 
