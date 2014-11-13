@@ -6,9 +6,6 @@ function LESSPlugin(options) {
   options = options || {};
   options.inputFile = options.inputFile || 'app.less';
   options.outputFile = options.outputFile || 'app.css';
-  if (options.sourceMap) {
-    options.sourceMap = options.outputFile + '.map';
-  }
   this.options = options;
 }
 
@@ -26,8 +23,6 @@ function EmberCLILESS(project) {
   this.project = project;
   this.name = 'Ember CLI LESS';
 }
-
-EmberCLILESS.prototype.treeFor = function treeFor() { };
 
 EmberCLILESS.prototype.included = function included(app) {
   var options = app.options.lessOptions || {};
