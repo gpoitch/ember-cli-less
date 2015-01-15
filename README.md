@@ -14,7 +14,7 @@ npm install --save-dev ember-cli-less
 By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.  
 In your development environment, a source map will be automatically be generated.  
 
-Additional options can be specified using the `lessOptions` config property in Brocfile.js:
+Additional options can be specified using the `lessOptions` config property in `Brocfile.js`:
 
 ```javascript
 var app = new EmberApp({
@@ -24,12 +24,39 @@ var app = new EmberApp({
 ```
 
 **Options:**  
-- `inputFile`: the input LESS file (defaults to `app.less`)
-- `outputFile`: the output CSS file (defaults to `app.css`)
 - `paths`: an array of include paths
 - `sourceMap`: whether to generate source maps. Defaults to `true` in development.
 
-## Example
+## Configuring Input/Output Paths
+
+You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js`:
+```javascript
+var app = new EmberApp({
+  outputPaths: {
+    app: {
+      css: {
+        'app': '/assets/my-project.css'
+      }
+    }
+  }
+});
+```
+
+You can also configure multiple output paths as follows:
+```javascript
+var app = new EmberApp({
+  outputPaths: {
+    app: {
+      css: {
+        'theme-orange': '/assets/theme-orange.css',
+        'theme-purple': '/assets/theme-purple.css'
+      }
+    }
+  }
+});
+```
+
+## Examples
 
 Using Bootstrap LESS source in your app and create a shortcut path:
 
