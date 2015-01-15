@@ -1,22 +1,27 @@
 var LESSCompiler = require('broccoli-less-single');
+var path         = require('path');
+var merge        = require('lodash-node/modern/objects/merge');
+var mergeTrees   = require('broccoli-merge-trees');
 
 function LESSPlugin(options) {
   this.name = 'ember-cli-less';
   this.ext = 'less';
-  options = options || {};
-  options.inputFile = options.inputFile || 'app.less';
-  options.outputFile = options.outputFile || 'app.css';
   this.options = options;
 }
 
-LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath) {
-  var trees = [tree];
-  if (this.options.paths) {
-    trees = trees.concat(this.options.paths);
-  }
-  inputPath += '/' + this.options.inputFile;
-  outputPath += '/' + this.options.outputFile;
-  return new LESSCompiler(trees, inputPath, outputPath, this.options);
+LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, options) {
+  options = merge({}, this.options, options);
+  var _this = this,
+      paths = options.outputPaths;
+
+  var trees = Object.keys(paths).map(function (file) {
+    var input = path.join(inputPath, file + '.' + _this.ext);
+    var output = paths[file];
+
+    return new LESSCompiler([tree], input, output, options);
+  });
+
+  return mergeTrees(trees);
 };
 
 function EmberCLILESS(project) {
@@ -29,7 +34,6 @@ EmberCLILESS.prototype.included = function included(app) {
   if ((options.sourceMap === undefined) && (app.env === 'development')) {
     options.sourceMap = true;
   }
-  options.outputFile = options.outputFile || this.project.name() + '.css';
   app.registry.add('css', new LESSPlugin(options));
 };
 
