@@ -13,7 +13,9 @@
   "author": "Garth Poitras",
   "license": "MIT",
   "dependencies": {
-    "broccoli-less-single": "^0.1.5"
+    "broccoli-less-single": "^0.1.5",
+    "broccoli-merge-trees": "^0.2.1",
+    "lodash-node": "^2.4.1"
   },
   "repository": {
     "type": "git",
