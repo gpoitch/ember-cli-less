@@ -29,7 +29,7 @@ var app = new EmberApp({
 
 ## Configuring Input/Output Paths
 
-You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js`:
+You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js` *(requires ember-cli >= 0.1.13)*:
 ```javascript
 var app = new EmberApp({
   outputPaths: {

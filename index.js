@@ -11,11 +11,11 @@ function LESSPlugin(options) {
 
 LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, options) {
   options = merge({}, this.options, options);
-  var _this = this,
-      paths = options.outputPaths;
+  var ext = this.ext;
+  var paths = options.outputPaths || { app: options.registry.app.options.outputPaths.app.css };
 
-  var trees = Object.keys(paths).map(function (file) {
-    var input = path.join(inputPath, file + '.' + _this.ext);
+  var trees = Object.keys(paths).map(function(file) {
+    var input = path.join(inputPath, file + '.' + ext);
     var output = paths[file];
 
     return new LESSCompiler([tree], input, output, options);
@@ -29,7 +29,7 @@ function EmberCLILESS(project) {
   this.name = 'Ember CLI LESS';
 }
 
-EmberCLILESS.prototype.included = function included(app) {
+EmberCLILESS.prototype.included = function(app) {
   var options = app.options.lessOptions || {};
   if ((options.sourceMap === undefined) && (app.env === 'development')) {
     options.sourceMap = true;
