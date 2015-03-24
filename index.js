@@ -2,6 +2,7 @@ var LESSCompiler = require('broccoli-less-single');
 var path         = require('path');
 var merge        = require('lodash-node/modern/objects/merge');
 var mergeTrees   = require('broccoli-merge-trees');
+var checker      = require('ember-cli-version-checker');
 
 function LESSPlugin(options) {
   this.name = 'ember-cli-less';
@@ -24,17 +25,39 @@ LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, options) {
   return mergeTrees(trees);
 };
 
-function EmberCLILESS(project) {
-  this.project = project;
-  this.name = 'Ember CLI LESS';
-}
+module.exports = {
+  name: 'Ember CLI LESS',
+  project: this.project,
 
-EmberCLILESS.prototype.included = function(app) {
-  var options = app.options.lessOptions || {};
-  if ((options.sourceMap === undefined) && (app.env === 'development')) {
-    options.sourceMap = true;
+  shouldSetupRegistryInIncluded: function() {
+    return !checker.isAbove(this, '0.2.0');
+  },
+
+  lessOptions: function() {
+    var env = process.env.EMBER_ENV;
+    var options = this.project.config(env).lessOptions
+        || (this.app && this.app.options.lessOptions) || {};
+    if ((options.sourceMap === undefined) && (env === 'development')) {
+      options.sourceMap = true;
+    }
+    return options;
+  },
+
+  setupPreprocessorRegistry: function(type, registry) {
+    registry.add('css', new LESSPlugin(this.lessOptions()));
+
+    // prevent conflict with broccoli-less-single if it's installed
+    if (registry.remove) {
+      registry.remove('css', 'broccoli-less-single');
+    }
+  },
+
+  included: function(app) {
+    this.app = app; // used to provide back-compat for ember-cli < 0.2.0 in lessOptions()
+    this._super.included.apply(this, arguments);
+
+    if (this.shouldSetupRegistryInIncluded()) {
+      this.setupPreprocessorRegistry('parent', app.registry);
+    }
   }
-  app.registry.add('css', new LESSPlugin(options));
-};
-
-module.exports = EmberCLILESS;
+}

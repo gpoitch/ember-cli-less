@@ -27,6 +27,15 @@ var app = new EmberApp({
 - `paths`: an array of include paths
 - `sourceMap`: whether to generate source maps. Defaults to `true` in development.
 
+## Usage in Addons
+
+You can also use this to precompile LESS files in an addon. By default, this
+will compile `addon/styles/addon.less` into a CSS file that can be used by the
+host app. *(requires ember-cli >= 0.2.0)*:
+
+To use `ember-cli-less` this way, specify it under the `dependencies` hash in
+your addon's `package.json`.
+
 ## Configuring Input/Output Paths
 
 You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js` *(requires ember-cli >= 0.1.13)*:
