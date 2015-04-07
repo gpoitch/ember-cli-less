@@ -10,11 +10,13 @@ function LESSPlugin(optionsFn) {
   this.optionsFn = optionsFn;
 }
 
-LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, options) {
-  options = merge({}, this.optionsFn(), options);
+LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions) {
+  var options = merge({}, this.optionsFn(), inputOptions);
 
   var ext = this.ext;
-  var paths = options.outputPaths || { app: options.registry.app.options.outputPaths.app.css };
+  var paths = options.outputPaths || {
+    app: options.registry.app.options.outputPaths.app.css
+  };
 
   var trees = Object.keys(paths).map(function(file) {
     var input = path.join(inputPath, file + '.' + ext);
