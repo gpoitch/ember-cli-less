@@ -4,16 +4,19 @@ var merge        = require('lodash-node/modern/objects/merge');
 var mergeTrees   = require('broccoli-merge-trees');
 var checker      = require('ember-cli-version-checker');
 
-function LESSPlugin(options) {
+function LESSPlugin(optionsFn) {
   this.name = 'ember-cli-less';
   this.ext = 'less';
-  this.options = options;
+  this.optionsFn = optionsFn;
 }
 
-LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, options) {
-  options = merge({}, this.options, options);
+LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions) {
+  var options = merge({}, this.optionsFn(), inputOptions);
+
   var ext = this.ext;
-  var paths = options.outputPaths || { app: options.registry.app.options.outputPaths.app.css };
+  var paths = options.outputPaths || {
+    app: options.registry.app.options.outputPaths.app.css
+  };
 
   var trees = Object.keys(paths).map(function(file) {
     var input = path.join(inputPath, file + '.' + ext);
@@ -35,16 +38,17 @@ module.exports = {
 
   lessOptions: function() {
     var env = process.env.EMBER_ENV;
-    var options = this.project.config(env).lessOptions
-        || (this.app && this.app.options.lessOptions) || {};
+    var options =  (this.app && this.app.options.lessOptions) || {};
+
     if ((options.sourceMap === undefined) && (env === 'development')) {
       options.sourceMap = true;
     }
+
     return options;
   },
 
   setupPreprocessorRegistry: function(type, registry) {
-    registry.add('css', new LESSPlugin(this.lessOptions()));
+    registry.add('css', new LESSPlugin(this.lessOptions.bind(this)));
 
     // prevent conflict with broccoli-less-single if it's installed
     if (registry.remove) {
