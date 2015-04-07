@@ -1,7 +1,6 @@
 # ember-cli-less
 
-Use LESS to preprocess your ember-cli app CSS.  
-***This is copied from https://github.com/aexmachina/ember-cli-sass. All credits to the author.***
+Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-cli.com/) app's css.
 
 ## Installation
 
@@ -12,14 +11,11 @@ npm install --save-dev ember-cli-less
 ## Usage
 
 By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.  
-In your development environment, a source map will be automatically be generated.  
-
 Additional options can be specified using the `lessOptions` config property in `Brocfile.js`:
 
 ```javascript
 var app = new EmberApp({
   lessOptions: {...}
-  ...
 });
 ```
 
@@ -27,18 +23,9 @@ var app = new EmberApp({
 - `paths`: an array of include paths
 - `sourceMap`: whether to generate source maps. Defaults to `true` in development.
 
-## Usage in Addons
-
-You can also use this to precompile LESS files in an addon. By default, this
-will compile `addon/styles/addon.less` into a CSS file that can be used by the
-host app. *(requires ember-cli >= 0.2.0)*:
-
-To use `ember-cli-less` this way, specify it under the `dependencies` hash in
-your addon's `package.json`.
-
 ## Configuring Input/Output Paths
 
-You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js` *(requires ember-cli >= 0.1.13)*:
+You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js`:
 ```javascript
 var app = new EmberApp({
   outputPaths: {
@@ -51,7 +38,8 @@ var app = new EmberApp({
 });
 ```
 
-You can also configure multiple output paths as follows:
+You can also configure multiple input/output paths to generate multiple css files:
+
 ```javascript
 var app = new EmberApp({
   outputPaths: {
@@ -65,13 +53,21 @@ var app = new EmberApp({
 });
 ```
 
+## Usage in Addons
+
+You can also use this to precompile LESS files in an addon. By default, this
+will compile `addon/styles/addon.less` into a CSS file that can be used by the
+host app. *(requires ember-cli >= 0.2.0)*:
+
+To use `ember-cli-less` this way, specify it under the `dependencies` hash in your addon's `package.json`.
+
 ## Examples
 
-Using Bootstrap LESS source in your app and create a shortcut path:
+Using Bootstrap Less source in your app:
 
 Install Bootstrap source:  
 ```
-bower install --save bootstrap
+bower install --S bootstrap
 ```
 
 Specify the include paths in Brocfile.js:  
@@ -103,5 +99,6 @@ However, if you would like to click into the less source files directly, you hav
 
 ## References
 
+- Code inspired by: [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). Credits to the author.
 - [broccoli-less-single](https://github.com/gabrielgrant/broccoli-less-single)
 
