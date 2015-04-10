@@ -11,12 +11,10 @@ npm install --save-dev ember-cli-less
 ## Usage
 
 By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.  
-Additional options can be specified using the `lessOptions` config property in `Brocfile.js`:
+Additional options can be specified using the `lessOptions` config property in `config/environment.js`:
 
 ```javascript
-var app = new EmberApp({
-  lessOptions: {...}
-});
+ENV.lessOptions = {...}
 ```
 
 **Options:**  
