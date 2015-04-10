@@ -38,7 +38,8 @@ module.exports = {
 
   lessOptions: function() {
     var env = process.env.EMBER_ENV;
-    var options =  (this.app && this.app.options.lessOptions) || {};
+    var options = this.project.config(env).lessOptions || 
+        (this.app && this.app.options.lessOptions) || {};
 
     if ((options.sourceMap === undefined) && (env === 'development')) {
       options.sourceMap = true;
