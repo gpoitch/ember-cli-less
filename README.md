@@ -55,11 +55,13 @@ var app = new EmberApp({
 
 ## Usage in Addons
 
-You can also use this to precompile LESS files in an addon. By default, this
-will compile `addon/styles/addon.less` into a CSS file that can be used by the
-host app. *(requires ember-cli >= 0.2.0)*:
+You can also use this to precompile less files in an addon. By default, this
+will compile `addon/styles/addon.less` into css that will be merged into the
+host app's css. *(requires ember-cli >= 0.2.0)*:
 
-To use `ember-cli-less` this way, specify it under the `dependencies` hash in your addon's `package.json`.
+1. Install `ember-cli-less` in your addon's `package.json` under `dependencies`
+2. Create your addon less file at `addon/styles/addon.less` (or where you specify in your options)
+3. To run the addon's dummy app, be sure to create `tests/dummy/app/styles/app.less` if it doesn't exist
 
 ## Examples
 
