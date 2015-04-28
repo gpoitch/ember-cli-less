@@ -19,9 +19,10 @@ var app = new EmberApp({
 });
 ```
 
-**Options:**  
+**Available Options:**  
 - `paths`: an array of include paths
-- `sourceMap`: whether to generate source maps. Defaults to `true` in development.
+- `sourceMap`: whether to generate source maps. Defaults to `true` in development.  sourceMap can also
+take an object of sub options: http://lesscss.org/usage/#programmatic-usage
 
 ## Configuring Input/Output Paths
 
@@ -90,9 +91,9 @@ Import into app.less:
 
 ## Linking source maps
 
-When setting `sourceMap: true`, a source map will be generated inline in the compiled css file.
-When inspecting elements in dev tools (Chrome), you'll see the correct references to the original less files and their corresponding line numbers.
-However, if you would like to click into the less source files directly, you have to link them to your local filesystem:
+When sourcemaps are enabled, you'll see the correct references to the original less files and their corresponding 
+line numbers in Dev Tools. If you would like to link the less source files directly, you have to link them to 
+your local filesystem in Chrome:
 
 1. Open dev tools > Sources tab
 2. Expand the sources pane on the left if it's not open
@@ -103,4 +104,4 @@ However, if you would like to click into the less source files directly, you hav
 
 - Code inspired by: [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). Credits to the author.
 - [broccoli-less-single](https://github.com/gabrielgrant/broccoli-less-single)
-
+- [less](https://github.com/less/less.js)

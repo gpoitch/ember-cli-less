@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-less",
-  "version": "1.3.2",
-  "description": "Use LESS to preprocess your ember-cli app CSS",
+  "version": "1.3.3",
+  "description": "Use less to preprocess your ember-cli app css",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,10 +15,10 @@
   "author": "Garth Poitras",
   "license": "MIT",
   "dependencies": {
-    "broccoli-less-single": "0.2.0",
+    "broccoli-less-single": "^0.3.0",
     "broccoli-merge-trees": "^0.2.1",
-    "lodash-node": "^2.4.1",
-    "ember-cli-version-checker": "^1.0.2"
+    "ember-cli-version-checker": "^1.0.2",
+    "lodash-node": "^2.4.1"
   },
   "repository": {
     "type": "git",
