@@ -64,5 +64,11 @@ module.exports = {
     if (this.shouldSetupRegistryInIncluded()) {
       this.setupPreprocessorRegistry('parent', app.registry);
     }
+  },
+
+  buildError: function(error) {
+    if (error) {
+      error.stack = error.stack || JSON.stringify(error, null, 2);
+    }
   }
 }
