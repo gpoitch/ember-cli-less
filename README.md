@@ -11,7 +11,7 @@ npm install --save-dev ember-cli-less
 ## Usage
 
 By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.  
-Additional options can be specified using the `lessOptions` config property in `Brocfile.js`:
+Additional options can be specified using the `lessOptions` config property in `ember-cli-build.js`:
 
 ```javascript
 var app = new EmberApp({
@@ -26,7 +26,7 @@ take an object of sub options: http://lesscss.org/usage/#programmatic-usage
 
 ## Configuring Input/Output Paths
 
-You can configure the input and output files using ember-cli's `outputPaths` option in `Brocfile.js`:
+You can configure the input and output files using ember-cli's `outputPaths` option in `ember-cli-build.js`:
 ```javascript
 var app = new EmberApp({
   outputPaths: {
@@ -73,7 +73,7 @@ Install Bootstrap source:
 bower install --S bootstrap
 ```
 
-Specify the include paths in Brocfile.js:  
+Specify the include paths in `ember-cli-build.js`:  
 ```javascript
 var app = new EmberApp({
   lessOptions: {
