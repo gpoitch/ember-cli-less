@@ -28,7 +28,7 @@ LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions
     return new LESSCompiler([tree], input, output, options);
   });
 
-  return mergeTrees(trees);
+  return mergeTrees(trees, options.mergeTrees);
 };
 
 module.exports = {

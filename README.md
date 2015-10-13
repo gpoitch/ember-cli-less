@@ -23,6 +23,7 @@ var app = new EmberApp({
 - `paths`: an array of include paths
 - `sourceMap`: whether to generate source maps. Defaults to `true` in development.  sourceMap can also
 take an object of sub options: http://lesscss.org/usage/#programmatic-usage
+- `mergeTrees`: an object of the available options to pass to the internal [merge trees] plugin
 
 ## Configuring Input/Output Paths
 
@@ -105,3 +106,5 @@ your local filesystem in Chrome:
 - Code inspired by: [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass). Credits to the author.
 - [broccoli-less-single](https://github.com/gabrielgrant/broccoli-less-single)
 - [less](https://github.com/less/less.js)
+
+[merge trees]: https://github.com/broccolijs/broccoli-merge-trees#options
