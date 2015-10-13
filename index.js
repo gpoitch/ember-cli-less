@@ -1,6 +1,6 @@
 var LESSCompiler = require('broccoli-less-single');
 var path         = require('path');
-var merge        = require('lodash-node/modern/objects/merge');
+var merge        = require('lodash.merge');
 var mergeTrees   = require('broccoli-merge-trees');
 var checker      = require('ember-cli-version-checker');
 

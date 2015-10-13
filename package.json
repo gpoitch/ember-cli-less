@@ -16,9 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "broccoli-less-single": "^0.3.0",
-    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-merge-trees": "^0.2.3",
     "ember-cli-version-checker": "^1.0.2",
-    "lodash-node": "^2.4.1"
+    "lodash.merge": "^3.3.2"
   },
   "repository": {
     "type": "git",
