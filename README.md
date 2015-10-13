@@ -28,6 +28,7 @@ take an object of sub options: http://lesscss.org/usage/#programmatic-usage
 ## Configuring Input/Output Paths
 
 You can configure the input and output files using ember-cli's `outputPaths` option in `ember-cli-build.js`:
+
 ```javascript
 var app = new EmberApp({
   outputPaths: {
@@ -51,9 +52,16 @@ var app = new EmberApp({
         'theme-purple': '/assets/theme-purple.css'
       }
     }
+  },
+  lessOptions: {
+    mergeTrees: {
+      overwrite: true
+    }
   }
 });
 ```
+
+Notice that the `mergeTrees.overwrite` option is currently required for this to work.
 
 ## Usage in Addons
 
