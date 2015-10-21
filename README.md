@@ -6,7 +6,6 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-less.svg)](http://emberobserver.com/addons/ember-cli-less)
 [![Build Status](https://travis-ci.org/gdub22/ember-cli-less.svg)](https://travis-ci.org/gdub22/ember-cli-less)
 
-
 ## Installation
 
 ```
@@ -15,7 +14,7 @@ npm install --save-dev ember-cli-less
 
 ## Usage
 
-By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.  
+By default, this addon will compile `app/styles/app.less` into `dist/assets/app.css`.
 Additional options can be specified using the `lessOptions` config property in `ember-cli-build.js`:
 
 ```javascript
@@ -24,11 +23,12 @@ var app = new EmberApp({
 });
 ```
 
-**Available Options:**  
-- `paths`: an array of include paths
-- `sourceMap`: whether to generate source maps. Defaults to `true` in development.  sourceMap can also
+**Available Options:**
+
+- `paths`: An array of include paths
+- `sourceMap`: Whether to generate source maps. Defaults to `true` in development and can also
 take an object of sub options: http://lesscss.org/usage/#programmatic-usage
-- `mergeTrees`: an object of the available options to pass to the internal [merge trees] plugin
+- `mergeTrees`: An object of the available options to pass to the internal [merge trees] plugin
 
 ## Configuring Input/Output Paths
 
@@ -57,16 +57,12 @@ var app = new EmberApp({
         'theme-purple': '/assets/theme-purple.css'
       }
     }
-  },
-  lessOptions: {
-    mergeTrees: {
-      overwrite: true
-    }
   }
 });
 ```
 
-Notice that the `mergeTrees.overwrite` option is currently required for this to work.
+*Notice that you cannot specify the name of the Source Map if multiple input/output paths are used.
+The name gets generated from the output path (`/assets/theme-orange.css` -> `/assets/theme-orange.css.map`).*
 
 ## Usage in Addons
 
@@ -82,12 +78,13 @@ host app's css. *(requires ember-cli >= 0.2.0)*:
 
 Using Bootstrap Less source in your app:
 
-Install Bootstrap source:  
+Install Bootstrap source:
 ```
 bower install --S bootstrap
 ```
 
-Specify the include paths in `ember-cli-build.js`:  
+Specify the include paths in `ember-cli-build.js`:
+
 ```javascript
 var app = new EmberApp({
   lessOptions: {
@@ -98,15 +95,16 @@ var app = new EmberApp({
 });
 ```
 
-Import into app.less:  
+Import into app.less:
+
 ```less
 @import 'bootstrap';
 ```
 
 ## Linking source maps
 
-When sourcemaps are enabled, you'll see the correct references to the original less files and their corresponding 
-line numbers in Dev Tools. If you would like to link the less source files directly, you have to link them to 
+When sourcemaps are enabled, you'll see the correct references to the original less files and their corresponding
+line numbers in Dev Tools. If you would like to link the less source files directly, you have to link them to
 your local filesystem in Chrome:
 
 1. Open dev tools > Sources tab
