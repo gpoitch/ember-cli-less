@@ -46,8 +46,8 @@ module.exports = {
     // fix issue with nested addons, in which case our app.options hash is actually on app.app.options.
     // n.b. this can be removed once ember-cli better supports nested addons.
     //   (see https://github.com/gdub22/ember-cli-less/issues/36)
-    if (!app.options && app.app && app.app.options) {
-        app = app.app;
+    if (!app.options && app.app) {
+      app = app.app;
     }
 
     var options = (app && app.options && app.options.lessOptions) || {};
