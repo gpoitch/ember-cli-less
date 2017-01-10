@@ -36,10 +36,6 @@
     "ember-cli-version-checker": "^1.1.4",
     "lodash.merge": "^3.3.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gdub22/ember-cli-less.git"
-  },
   "bugs": {
     "url": "https://github.com/gdub22/ember-cli-less/issues"
   },
