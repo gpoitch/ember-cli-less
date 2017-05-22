@@ -73,6 +73,14 @@ host app's css. *(requires ember-cli >= 0.2.0)*:
 1. Install `ember-cli-less` in your addon's `package.json` under `dependencies`
 2. Create your addon less file at `addon/styles/addon.less` (or where you specify in your options)
 3. To run the addon's dummy app, be sure to create `tests/dummy/app/styles/app.less` if it doesn't exist
+4. To make less files available for applications that consume this addon, create `app/styles/app.less` in your addon and add `@import 'addon/styles/addon';` to its content
+
+To include custom css files, use `@import` statment in `addon/styles/addon.less`. For example:
+```less
+// addon/styles/addon.less
+@import "bower_components/bootstrap/less/bootstrap";  // look for "bower_components/bootstrap/less/bootstrap.less"
+```
+
 
 ## Examples
 
