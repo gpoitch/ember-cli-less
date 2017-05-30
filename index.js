@@ -22,10 +22,11 @@ LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions
   };
 
   var trees = Object.keys(paths).map(function(file) {
-    var input = path.join(inputPath, file + '.' + ext);
+    var sourceFileName = file + '.' + ext;
     var output = paths[file];
+    var sourceFolderAbsolutePath = path.resolve('.' + inputPath);
 
-    return new LESSCompiler([tree], input, output, options);
+    return new LESSCompiler([sourceFolderAbsolutePath], sourceFileName, output, options);
   });
 
   return mergeTrees(trees, options.mergeTrees);
