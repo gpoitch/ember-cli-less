@@ -79,7 +79,9 @@ module.exports = {
 
   buildError: function(error) {
     if (error) {
-      error.stack = error.stack || JSON.stringify(error, null, 2);
+      try {
+        error.stack = error.stack || JSON.stringify(error, null, 2);
+      } catch (err) { }
     }
   }
 }
