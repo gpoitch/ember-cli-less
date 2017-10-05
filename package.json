@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-less",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Use less to preprocess your ember-cli app css",
   "directories": {
     "doc": "doc",
