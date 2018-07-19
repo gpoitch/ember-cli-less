@@ -31,7 +31,7 @@
     "preprocessor"
   ],
   "dependencies": {
-    "broccoli-less-single": "^0.6.4",
+    "broccoli-less-single": "^1.0.0",
     "broccoli-merge-trees": "^1.0.0",
     "ember-cli-version-checker": "^1.1.4",
     "lodash.merge": "^3.3.2"
