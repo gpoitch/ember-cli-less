@@ -6,9 +6,10 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-less.svg)](http://emberobserver.com/addons/ember-cli-less)
 [![Build Status](https://travis-ci.org/gdub22/ember-cli-less.svg)](https://travis-ci.org/gdub22/ember-cli-less)
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
-```
+```sh
 npm install --save-dev ember-cli-less
 ```
 
@@ -18,7 +19,7 @@ By default, this addon will compile `app/styles/app.less` into `dist/assets/app.
 Additional options can be specified using the `lessOptions` config property in `ember-cli-build.js`:
 
 ```javascript
-var app = new EmberApp({
+let app = new EmberApp({
   lessOptions: {...}
 });
 ```
@@ -35,7 +36,7 @@ take an object of sub options: http://lesscss.org/usage/#programmatic-usage
 You can configure the input and output files using ember-cli's `outputPaths` option in `ember-cli-build.js`:
 
 ```javascript
-var app = new EmberApp({
+let app = new EmberApp({
   outputPaths: {
     app: {
       css: {
@@ -49,7 +50,7 @@ var app = new EmberApp({
 You can also configure multiple input/output paths to generate multiple css files:
 
 ```javascript
-var app = new EmberApp({
+let app = new EmberApp({
   outputPaths: {
     app: {
       css: {
@@ -94,7 +95,7 @@ bower install --S bootstrap
 Specify the include paths in `ember-cli-build.js`:
 
 ```javascript
-var app = new EmberApp({
+let app = new EmberApp({
   lessOptions: {
     paths: [
       'bower_components/bootstrap/less'
