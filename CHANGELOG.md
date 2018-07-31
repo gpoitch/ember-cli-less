@@ -8,12 +8,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* Use Less v3 ([7621c96](https://github.com/gdub22/ember-cli-less/commit/7621c96)), closes [/github.com/less/less.js/blob/9590b7b10a98f8e682213529f7a44b710243af61/CHANGELOG.md#300](https://github.com//github.com/less/less.js/blob/9590b7b10a98f8e682213529f7a44b710243af61/CHANGELOG.md/issues/300)
+* Use Less v3 ([7621c96](https://github.com/gdub22/ember-cli-less/commit/7621c96))
 
 
 ### BREAKING CHANGES
 
-* This uses Less v3 (previously we used v2).
+* This uses Less v3 (previously we used v2). See Less v3 changelog for changes from v2 to v3: https://github.com/less/less.js/blob/9590b7b10a98f8e682213529f7a44b710243af61/CHANGELOG.md#300
 
 
 
