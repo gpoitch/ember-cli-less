@@ -20,6 +20,9 @@ LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions
     app: options.registry.app.options.outputPaths.app.css
   };
 
+  /* remove `registry` object we pass into Less */
+  delete options.registry;
+
   var trees = Object.keys(paths).map(function(file) {
     var input = path.join(inputPath, file + '.' + ext);
     var output = paths[file];
