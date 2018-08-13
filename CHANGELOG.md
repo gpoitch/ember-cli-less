@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/gdub22/ember-cli-less/compare/v2.0.0...v2.0.1) (2018-08-13)
+
+
+### Bug Fixes
+
+* do not pass in ember-cli's registry object into Less compiler. ([#66](https://github.com/gdub22/ember-cli-less/issues/66)) ([e47af1e](https://github.com/gdub22/ember-cli-less/commit/e47af1e))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/gdub22/ember-cli-less/compare/v1.5.7...v2.0.0) (2018-07-31)
 
