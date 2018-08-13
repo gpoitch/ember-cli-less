@@ -83,7 +83,7 @@ module.exports = {
     if (error) {
       try {
         error.stack = error.stack || JSON.stringify(error, null, 2);
-      } catch (err) { }
+      } catch (err) { } // eslint-disable-line no-empty
     }
   }
 }
