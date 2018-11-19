@@ -34,7 +34,7 @@ LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions
 };
 
 module.exports = {
-  name: 'Ember CLI LESS',
+  name: require('./package').name,
   project: this.project,
 
   shouldSetupRegistryInIncluded: function() {
