@@ -6,6 +6,15 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-less.svg)](http://emberobserver.com/addons/ember-cli-less)
 [![Build Status](https://travis-ci.org/gdub22/ember-cli-less.svg)](https://travis-ci.org/gdub22/ember-cli-less)
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.4 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -87,6 +96,7 @@ To include custom css files, use `@import` statment in `addon/styles/addon.less`
 
 Using Bootstrap Less source in your app:
 
+
 Install Bootstrap source:
 ```
 bower install --S bootstrap
@@ -120,6 +130,10 @@ your local filesystem in Chrome:
 2. Expand the sources pane on the left if it's not open
 3. Right-click anywhere, _Add folder to workspace_, add your project's folder
 4. Locate any less source file in the tree, right-click, _Map to Network Resource..._ to create the mapping
+
+## Contributing
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 ## References
 
