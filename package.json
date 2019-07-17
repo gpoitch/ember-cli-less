@@ -25,10 +25,10 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "broccoli-less-single": "^1.0.1",
+    "broccoli-less-single": "^1.0.2",
     "broccoli-merge-trees": "^1.0.0",
     "ember-cli-version-checker": "^1.1.4",
-    "lodash.merge": "^3.3.2"
+    "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
