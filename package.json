@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-less",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Use less to preprocess your ember-cli app css",
   "keywords": [
     "ember-addon",
@@ -25,7 +25,7 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "broccoli-less-single": "^1.1.0",
+    "broccoli-less-single": "^1.0.2",
     "broccoli-merge-trees": "^1.0.0",
     "ember-cli-version-checker": "^1.1.4",
     "lodash.merge": "^4.6.2"
