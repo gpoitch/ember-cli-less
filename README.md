@@ -88,7 +88,7 @@ host app's css. *(requires ember-cli >= 0.2.0)*:
 To include custom css files, use `@import` statment in `addon/styles/addon.less`. For example:
 ```less
 // addon/styles/addon.less
-@import "bower_components/bootstrap/less/bootstrap";  // look for "bower_components/bootstrap/less/bootstrap.less"
+@import "node_modules/bootstrap-less/bootstrap/bootstrap";  // look for "node_modules/bootstrap-less/bootstrap/bootstrap.less"
 ```
 
 
@@ -108,7 +108,7 @@ Specify the include paths in `ember-cli-build.js`:
 let app = new EmberApp({
   lessOptions: {
     paths: [
-      'bower_components/bootstrap/less'
+      'node_modules/bootstrap-less/bootstrap/'
     ]
   }
 });
