@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/gdub22/ember-cli-less/compare/v2.0.1...v2.0.3) (2019-09-28)
+
+
+### Bug Fixes
+
+* audit deps ([6aee42b](https://github.com/gdub22/ember-cli-less/commit/6aee42b))
+* audit deps ([21a662e](https://github.com/gdub22/ember-cli-less/commit/21a662e))
+* security patch ([#72](https://github.com/gdub22/ember-cli-less/issues/72)) ([3f5fc3f](https://github.com/gdub22/ember-cli-less/commit/3f5fc3f))
+* Update to Ember 3.5 ([#68](https://github.com/gdub22/ember-cli-less/issues/68)) ([0038eea](https://github.com/gdub22/ember-cli-less/commit/0038eea))
+* update-cli ([ed784ba](https://github.com/gdub22/ember-cli-less/commit/ed784ba))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/gdub22/ember-cli-less/compare/v2.0.0...v2.0.1) (2018-08-13)
 
