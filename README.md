@@ -4,7 +4,7 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 
 [![npm version](https://badge.fury.io/js/ember-cli-less.svg)](http://badge.fury.io/js/ember-cli-less)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-less.svg)](http://emberobserver.com/addons/ember-cli-less)
-[![Build Status](https://travis-ci.org/gdub22/ember-cli-less.svg)](https://travis-ci.org/gdub22/ember-cli-less)
+[![Build Status](https://travis-ci.org/gpoitch/ember-cli-less.svg)](https://travis-ci.org/gpoitch/ember-cli-less)
 
 
 Compatibility
