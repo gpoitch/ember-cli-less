@@ -28,7 +28,7 @@
     "broccoli-less-single": "^1.1.0",
     "broccoli-merge-trees": "^1.0.0",
     "ember-cli-version-checker": "^1.1.4",
-    "lodash.merge": "^4.6.2"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
