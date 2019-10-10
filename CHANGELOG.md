@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.4"></a>
+## [2.0.4](https://github.com/gdub22/ember-cli-less/compare/v2.0.3...v2.0.4) (2019-10-10)
+
+
+### Bug Fixes
+
+* Updating lodash ([#74](https://github.com/gdub22/ember-cli-less/issues/74)) ([a82678a](https://github.com/gdub22/ember-cli-less/commit/a82678a))
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/gdub22/ember-cli-less/compare/v2.0.1...v2.0.3) (2019-09-28)
 
