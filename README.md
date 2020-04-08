@@ -6,17 +6,13 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-less.svg)](http://emberobserver.com/addons/ember-cli-less)
 [![Build Status](https://travis-ci.org/gpoitch/ember-cli-less.svg)](https://travis-ci.org/gpoitch/ember-cli-less)
 
+## Compatibility
 
-Compatibility
-------------------------------------------------------------------------------
+- Ember.js v3.12 or above
+- Ember CLI v2.13 or above
+- Node.js v10 or above
 
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```sh
 npm install --save-dev ember-cli-less
@@ -37,7 +33,7 @@ let app = new EmberApp({
 
 - `paths`: An array of include paths
 - `sourceMap`: Whether to generate source maps. Defaults to `true` in development and can also
-take an object of sub options: http://lesscss.org/usage/#programmatic-usage
+  take an object of sub options: http://lesscss.org/usage/#programmatic-usage
 - `mergeTrees`: An object of the available options to pass to the internal [merge trees] plugin
 
 ## Configuring Input/Output Paths
@@ -49,10 +45,10 @@ let app = new EmberApp({
   outputPaths: {
     app: {
       css: {
-        'app': '/assets/my-project.css'
-      }
-    }
-  }
+        app: '/assets/my-project.css',
+      },
+    },
+  },
 });
 ```
 
@@ -64,21 +60,21 @@ let app = new EmberApp({
     app: {
       css: {
         'theme-orange': '/assets/theme-orange.css',
-        'theme-purple': '/assets/theme-purple.css'
-      }
-    }
-  }
+        'theme-purple': '/assets/theme-purple.css',
+      },
+    },
+  },
 });
 ```
 
-*Notice that you cannot specify the name of the Source Map if multiple input/output paths are used.
-The name gets generated from the output path (`/assets/theme-orange.css` -> `/assets/theme-orange.css.map`).*
+_Notice that you cannot specify the name of the Source Map if multiple input/output paths are used.
+The name gets generated from the output path (`/assets/theme-orange.css` -> `/assets/theme-orange.css.map`)._
 
 ## Usage in Addons
 
 You can also use this to precompile less files in an addon. By default, this
 will compile `addon/styles/addon.less` into css that will be merged into the
-host app's css. *(requires ember-cli >= 0.2.0)*:
+host app's css:
 
 1. Install `ember-cli-less` in your addon's `package.json` under `dependencies`
 2. Create your addon less file at `addon/styles/addon.less` (or where you specify in your options)
@@ -86,18 +82,18 @@ host app's css. *(requires ember-cli >= 0.2.0)*:
 4. To make less files available for applications that consume this addon, create `app/styles/app.less` in your addon and add `@import 'addon/styles/addon';` to its content
 
 To include custom css files, use `@import` statment in `addon/styles/addon.less`. For example:
+
 ```less
 // addon/styles/addon.less
-@import "node_modules/bootstrap-less/bootstrap/bootstrap";  // look for "node_modules/bootstrap-less/bootstrap/bootstrap.less"
+@import 'node_modules/bootstrap-less/bootstrap/bootstrap'; // look for "node_modules/bootstrap-less/bootstrap/bootstrap.less"
 ```
-
 
 ## Examples
 
 Using Bootstrap Less source in your app:
 
-
 Install Bootstrap source:
+
 ```
 bower install --S bootstrap
 ```
@@ -107,10 +103,8 @@ Specify the include paths in `ember-cli-build.js`:
 ```javascript
 let app = new EmberApp({
   lessOptions: {
-    paths: [
-      'node_modules/bootstrap-less/bootstrap/'
-    ]
-  }
+    paths: ['node_modules/bootstrap-less/bootstrap/'],
+  },
 });
 ```
 
