@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/gdub22/ember-cli-less/compare/v2.0.6...v3.0.0) (2020-04-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop Ember < 3.12 (although old versions may still work, we no longer test against them)
+* Drop support for Node < 10
+
+### Bug Fixes
+
+* remove lodash and update checker ([c3469c4](https://github.com/gdub22/ember-cli-less/commit/c3469c482fd2887e81b907d6d54392fb74457d62))
+* v3.11.0...v3.17.0 ([6d7a56d](https://github.com/gdub22/ember-cli-less/commit/6d7a56db12065a6236883dbbd3494a58b4076a6e))
+
 ### [2.0.6](https://github.com/gdub22/ember-cli-less/compare/v2.0.5...v2.0.6) (2020-04-08)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-less",
-  "version": "2.0.6",
+  "version": "3.0.0",
   "description": "Use less to preprocess your ember-cli app css",
   "keywords": [
     "ember-addon",
