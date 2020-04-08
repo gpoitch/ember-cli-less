@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.5"></a>
+## [2.0.5](https://github.com/gdub22/ember-cli-less/compare/v2.0.4...v2.0.5) (2020-04-08)
+
+
+### Bug Fixes
+
+* add cache options ([b43c216](https://github.com/gdub22/ember-cli-less/commit/b43c216)), closes [#28](https://github.com/gdub22/ember-cli-less/issues/28)
+
+
+
 <a name="2.0.4"></a>
 ## [2.0.4](https://github.com/gdub22/ember-cli-less/compare/v2.0.3...v2.0.4) (2019-10-10)
 
