@@ -13,7 +13,9 @@ function LESSPlugin(optionsFn) {
 }
 
 LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions) {
-  var options = merge({}, this.optionsFn(), inputOptions);
+  var options = merge({
+    cacheInclude: [/.*\.(css|less)$/]
+  }, this.optionsFn(), inputOptions);
 
   var ext = this.ext;
   var paths = options.outputPaths || {
