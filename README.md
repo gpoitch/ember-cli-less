@@ -94,8 +94,8 @@ Using Bootstrap Less source in your app:
 
 Install Bootstrap source:
 
-```
-bower install --S bootstrap
+```sh
+npm install --save-dev bootstrap-less
 ```
 
 Specify the include paths in `ember-cli-build.js`:
