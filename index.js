@@ -1,9 +1,9 @@
 'use strict';
 
 const LESSCompiler = require('broccoli-less-single');
-const path         = require('path');
-const mergeTrees   = require('broccoli-merge-trees');
-const VersionChecker  = require('ember-cli-version-checker');
+const path = require('path');
+const mergeTrees = require('broccoli-merge-trees');
+const VersionChecker = require('ember-cli-version-checker');
 
 function LESSPlugin(optionsFn) {
   this.name = 'ember-cli-less';
@@ -11,20 +11,29 @@ function LESSPlugin(optionsFn) {
   this.optionsFn = optionsFn;
 }
 
-LESSPlugin.prototype.toTree = function(tree, inputPath, outputPath, inputOptions) {
-  let options = Object.assign({
-    cacheInclude: [/.*\.(css|less)$/]
-  }, this.optionsFn(), inputOptions);
+LESSPlugin.prototype.toTree = function (
+  tree,
+  inputPath,
+  outputPath,
+  inputOptions
+) {
+  let options = Object.assign(
+    {
+      cacheInclude: [/.*\.(css|less)$/],
+    },
+    this.optionsFn(),
+    inputOptions
+  );
 
   let ext = this.ext;
   let paths = options.outputPaths || {
-    app: options.registry.app.options.outputPaths.app.css
+    app: options.registry.app.options.outputPaths.app.css,
   };
 
   /* remove `registry` object we pass into Less */
   delete options.registry;
 
-  let trees = Object.keys(paths).map(function(file) {
+  let trees = Object.keys(paths).map(function (file) {
     let input = path.join(inputPath, file + '.' + ext);
     let output = paths[file];
 
@@ -38,13 +47,13 @@ module.exports = {
   name: require('./package').name,
   project: this.project,
 
-  shouldSetupRegistryInIncluded: function() {
+  shouldSetupRegistryInIncluded: function () {
     const checker = new VersionChecker(this.project);
     const cliDep = checker.for('ember-cli');
     return !cliDep.isAbove('0.2.0');
   },
 
-  lessOptions: function() {
+  lessOptions: function () {
     let env = process.env.EMBER_ENV;
     let app = this.app;
 
@@ -57,14 +66,14 @@ module.exports = {
 
     let options = (app && app.options && app.options.lessOptions) || {};
 
-    if ((options.sourceMap === undefined) && (env === 'development')) {
+    if (options.sourceMap === undefined && env === 'development') {
       options.sourceMap = true;
     }
 
     return options;
   },
 
-  setupPreprocessorRegistry: function(type, registry) {
+  setupPreprocessorRegistry: function (type, registry) {
     registry.add('css', new LESSPlugin(this.lessOptions.bind(this)));
 
     // prevent conflict with broccoli-less-single if it's installed
@@ -73,7 +82,7 @@ module.exports = {
     }
   },
 
-  included: function(app) {
+  included: function (app) {
     this.app = app; // used to provide back-compat for ember-cli < 0.2.0 in lessOptions()
     this._super.included.apply(this, arguments);
 
@@ -82,11 +91,11 @@ module.exports = {
     }
   },
 
-  buildError: function(error) {
+  buildError: function (error) {
     if (error) {
       try {
         error.stack = error.stack || JSON.stringify(error, null, 2);
-      } catch (err) { } // eslint-disable-line no-empty
+      } catch (err) {} // eslint-disable-line no-empty
     }
-  }
-}
+  },
+};
