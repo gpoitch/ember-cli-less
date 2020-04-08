@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [2.0.6](https://github.com/gdub22/ember-cli-less/compare/v2.0.5...v2.0.6) (2020-04-08)
+
+
+### Bug Fixes
+
+* audit deps ([16039ff](https://github.com/gdub22/ember-cli-less/commit/16039ffd227e60f5104aa6ae5a7eb917953c6c64))
 
 <a name="2.0.5"></a>
 ## [2.0.5](https://github.com/gdub22/ember-cli-less/compare/v2.0.4...v2.0.5) (2020-04-08)
