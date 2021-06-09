@@ -27,7 +27,7 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "broccoli-less-single": "^1.1.0",
+    "broccoli-less-single": "github:abrahamspaa/broccoli-less-single#vulnerability-fix",
     "broccoli-merge-trees": "^1.0.0",
     "ember-cli-htmlbars": "^4.2.3",
     "ember-cli-version-checker": "^5.0.2"
