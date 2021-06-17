@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/gdub22/ember-cli-less/compare/v3.0.1...v3.0.2) (2021-06-17)
+
+
+### Bug Fixes
+
+* npm audit fix ([57b80f8](https://github.com/gdub22/ember-cli-less/commit/57b80f8fa325452118528eec826e74bfd62f852b))
+* Vulnerable fix ([#90](https://github.com/gdub22/ember-cli-less/issues/90)) ([9286155](https://github.com/gdub22/ember-cli-less/commit/9286155fe36f6f7a8859f1829af5886c0d9df994))
+
 ### [3.0.1](https://github.com/gdub22/ember-cli-less/compare/v3.0.0...v3.0.1) (2020-04-08)
 
 ## [3.0.0](https://github.com/gdub22/ember-cli-less/compare/v2.0.6...v3.0.0) (2020-04-08)
