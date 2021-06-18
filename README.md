@@ -8,7 +8,7 @@ Use [Less](http://lesscss.org/) to preprocess your [ember-cli](http://www.ember-
 
 ## Compatibility
 
-- Ember.js v3.12 or above
+- Ember.js v3.16 or above
 - Ember CLI v2.13 or above
 - Node.js v10 or above
 
